@@ -1,0 +1,132 @@
+/* General page styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-container {
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chat-title {
+  background-color: #009973;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.chat-box {
+  padding: 20px;
+  height: 400px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 15px;
+}
+
+.user {
+  background-color: #d1f3ff;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.bot {
+  background-color: #f1f0f0;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+/* Typing animation */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.typing-indicator .dot {
+  animation: blink 1.5s infinite;
+  margin-left: 3px;
+  font-weight: bold;
+}
+
+.typing-indicator .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-indicator .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 20% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+/* Input area styling */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.input-area input[type="text"] {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-area input[type="text"]:focus {
+  border-color: #009973;
+}
+
+/* Square buttons */
+.input-area button {
+  margin-left: 8px;
+  padding: 10px 16px;
+  background-color: #009973;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px; /* Square */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+}
+
+.input-area button:hover {
+  background-color: #007f5f;
+}
+
+/* Responsive chat box height */
+@media (max-height: 700px) {
+  .chat-box {
+    height: 300px;
+  }
+}
