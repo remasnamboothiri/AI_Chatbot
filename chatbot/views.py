@@ -34,7 +34,7 @@ def chat_view(request):
 
 
         headers = {
-            "Authorization": f"Bearer {NOVITA_API_KEY}",
+            "Authorization": f"Bearer {config('NOVITA_API_KEY')}",
             "Content-Type": "application/json",
         }
 
